@@ -334,4 +334,18 @@ setTimeout(checkUpdate, 3000);
 // ----------------------------------------
 
 (async()=>{const o=await loadSaved();if(o)S=o;norm();ready=true;save();applyBg();render();fx();setInterval(remind,20000);if(!S.name)askName()})();
+    // داكشي القديم لي عندك...
+    });
+    
+    // زيد هاد الكود هنا:
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Service Worker registered!', reg))
+          .catch(err => console.log('Service Worker failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
 </script></body></html>
